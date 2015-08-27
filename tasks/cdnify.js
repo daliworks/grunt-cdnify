@@ -51,7 +51,7 @@ var htmlDefaults = {
 };
 
 module.exports = function (grunt) {
-  grunt.registerMultiTask('cdnify', 'Converts relative URLs to absolute ones.', function() {
+  grunt.registerMultiTask('daliCdnify', 'Converts relative URLs to absolute ones.', function() {
 
     var options = this.options(defaults);
 
