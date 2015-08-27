@@ -71,7 +71,7 @@ module.exports = function (grunt) {
     var rewriteURL;
     if (typeof options.base === 'string') {
       rewriteURL = function (url) {
-        if (isLocalPath(url))
+        if (isLocalPath(url) && options.checkUrl && options.checkUrl(url))
           return joinBaseAndPath(options.base, url);
         return url;
       };
